@@ -36,4 +36,6 @@
 
 // } )); 
 
-Route::get('/post/{id}',  'peterController@index');
+// Route::get('/post/{id}',  'peterController@index');
+
+Route::resource('posts', 'peterController');

@@ -26,7 +26,9 @@ class peterController extends Controller
      */
     public function create()
     {
-        //
+    
+        return "i am the method that create stuff ";
+        
     }
 
     /**
@@ -49,6 +51,7 @@ class peterController extends Controller
     public function show($id)
     {
         //
+        return "this is me" ;
     }
 
     /**

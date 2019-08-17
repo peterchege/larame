@@ -44,5 +44,5 @@ Route::resource('posts', 'peterController');
 
 Route::get('/contact', 'peterController@contact');
 
-Route::get('/post/{id}', 'peterController@show_post');
+Route::get('/post/{id}/{name}/{password}', 'peterController@show_post');
 

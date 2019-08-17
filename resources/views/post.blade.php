@@ -9,7 +9,7 @@
     <body>
         <div class="container">
 
-            <h1> Post {{$id}} </h1>
+            <h1> Post {{$id}} {{$name}} {{$password}} </h1>
 
         </div>
     </body>

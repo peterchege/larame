@@ -1,14 +1,11 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Laravel</title>
+@extends('layout.app')
 
-        <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
 
-    </head>
-    <body>
-        <div class="container">
-            <h1>contact page</h1>
-        </div>
-    </body>
-</html>
+
+
+
+@section('content')
+
+    <h1> Contact Page </h1>
+
+@stop

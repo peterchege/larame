@@ -1,4 +1,4 @@
-{{-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
     <head>
         <title>Laravel</title>
@@ -8,21 +8,14 @@
     </head>
     <body>
         <div class="container">
+            @yield('content')
 
-            <h1> Post {{$id}} {{$name}} {{$password}} </h1>
 
         </div>
+
+
+
+        @yield('footer')
+
     </body>
-</html> --}}
-
-@extends('layout.app')
-
-
-
-
-
-@section('content')
-
-    <h1> Post Page {{$id}} {{$name}} {{$password}} </h1>
-
-@stop
+</html>

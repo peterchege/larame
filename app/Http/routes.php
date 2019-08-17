@@ -11,9 +11,9 @@
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+Route::get('/', function () {
+    return view('welcome');
+});
 
 // Route::get('/about', function () {
 //     return "Hi about page";
@@ -38,4 +38,8 @@
 
 // Route::get('/post/{id}',  'peterController@index');
 
+// use Illuminate\Routing\Route;
+
 Route::resource('posts', 'peterController');
+
+Route::get('/contact', 'peterController@contact');

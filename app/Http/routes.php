@@ -43,3 +43,6 @@ Route::get('/', function () {
 Route::resource('posts', 'peterController');
 
 Route::get('/contact', 'peterController@contact');
+
+Route::get('/post/{id}', 'peterController@show_post');
+

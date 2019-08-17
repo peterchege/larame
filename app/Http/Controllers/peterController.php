@@ -87,4 +87,8 @@ class peterController extends Controller
     {
         //
     }
+    
+    public function contact(){
+        return view('contact');
+    }
 }

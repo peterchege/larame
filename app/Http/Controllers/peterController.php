@@ -104,4 +104,9 @@ class peterController extends Controller
         return view('contact', compact('people'));
 
     }
+
+    public function phonebook(){
+        $numbers = ['0702','0722','0738'];
+        return view('contact', compact('numbers'));
+    }
 }

@@ -88,13 +88,20 @@ class peterController extends Controller
         //
     }
     
+    // public function contact(){
+    //     return view('contact');
+    // }
+
+    // public function show_post($id, $name, $password){
+
+    //     // return view('post')->with('id',$id);
+    //     return view('post', compact('id','name','password'));
+    // }
+
     public function contact(){
-        return view('contact');
-    }
 
-    public function show_post($id, $name, $password){
+        $people =['peter','chege','kinuthia'];
+        return view('contact', compact('people'));
 
-        // return view('post')->with('id',$id);
-        return view('post', compact('id','name','password'));
     }
 }

@@ -48,3 +48,7 @@ Route::get('/contact', 'peterController@phonebook');
 
 Route::get('/post/{id}/{name}/{password}', 'peterController@show_post');
 
+Route::get('/insert', function(){
+    DB::insert('insert into posts(title, content) value(?, ?)', ['php with laravel', 'laravel is the best thing that happened to php']);
+});
+

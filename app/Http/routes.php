@@ -1,5 +1,7 @@
 <?php
 
+use App\Post;
+
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -50,44 +52,67 @@ Route::get('/post/{id}/{name}/{password}', 'peterController@show_post');
 
 
 
-// Raw SQL 
+/*
+|--------------------------------------------------------------------------
+| RAW SQL QUERY Routes
+|--------------------------------------------------------------------------
+|
+*/
 
 // SQL INSERT
 
-Route::get('/insert', function(){
+// Route::get('/insert', function(){
 
-    DB::insert('insert into posts(title, content) value(?, ?)', ['php with laravel', 'laravel is the best thing that happened to php']);
+//     DB::insert('insert into posts(title, content) value(?, ?)', ['php with laravel', 'laravel is the best thing that happened to php']);
+// });
+
+
+// // SQL READ
+
+// route::get('/read', function() {
+
+//     $results = DB::select('select * from posts where id= ?',[1]);
+
+//     // foreach($results as $post){
+//     //     return $post-> title;
+//     // }
+
+//     // return $results;
+//     return var_dump($results);
+// });
+
+// // SQL UPDATE
+
+// route::get('/update', function(){
+
+//     $updated = DB::update('update posts set title="update title" where id = ?', [1]);
+
+//     return $updated;
+// });
+
+// // SQL DELETE
+
+// route::get('/delete', function(){
+
+//     $remove = DB::delete('delete from posts where id = ?', [1]);
+
+//     return $remove;
+// });
+
+/*
+|--------------------------------------------------------------------------
+| ELOQUENT ORM
+|--------------------------------------------------------------------------
+|
+*/
+
+Route::get('/read', function(){
+    
+    $posts = Post::all(); 
+
+    foreach($posts as $post){
+       
+        return $post->title;
+    }
 });
 
-
-// SQL READ
-
-route::get('/read', function() {
-
-    $results = DB::select('select * from posts where id= ?',[1]);
-
-    // foreach($results as $post){
-    //     return $post-> title;
-    // }
-
-    // return $results;
-    return var_dump($results);
-});
-
-// SQL UPDATE
-
-route::get('/update', function(){
-
-    $updated = DB::update('update posts set title="update title" where id = ?', [1]);
-
-    return $updated;
-});
-
-// SQL DELETE
-
-route::get('/delete', function(){
-
-    $remove = DB::delete('delete from posts where id = ?', [1]);
-
-    return $remove;
-});

@@ -63,7 +63,7 @@ Route::get('/post/{id}/{name}/{password}', 'peterController@show_post');
 
 // Route::get('/insert', function(){
 
-//     DB::insert('insert into posts(title, content) value(?, ?)', ['php with laravel', 'laravel is the best thing that happened to php']);
+//     DB::insert('insert into posts(title, content) value(?, ?)', ['laravel vz lumen', 'lumen is the best thing that happened to laravel']);
 // });
 
 
@@ -106,13 +106,35 @@ Route::get('/post/{id}/{name}/{password}', 'peterController@show_post');
 |
 */
 
-Route::get('/read', function(){
+// Route::get('/read', function(){
     
-    $posts = Post::all(); 
+//     $posts = Post::all(); 
 
-    foreach($posts as $post){
+//     foreach($posts as $post){
        
-        return $post->title;
-    }
-});
+//         return $post->title;
+//     }
+// });
 
+
+// Route::get('/find', function(){
+    
+//     $post = Post::find(3); 
+
+//     return $post->title;
+ 
+//     // foreach($posts as $post){
+       
+//     //     return $post->title;
+//     // }
+    
+// });
+
+Route::get('/findwhere', function(){
+    
+    $post = Post::where('id', 3)->orderBy('id', 'desc')->take(1)->get();
+     return $post;
+    
+});
+ 
+ 
